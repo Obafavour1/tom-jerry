@@ -70,6 +70,10 @@ img{
     transition: all 0.3s ease-in-out;
 }
 
+#check{
+    display: none;
+}
+
 .homee{
     display: flex;
     gap: 20px;
@@ -186,7 +190,7 @@ h2{
 }
 
 .about-content {
-    margin-top: 50px;
+    margin-top: 10px;
     width: 40%;
     text-align: justify;
 }
@@ -209,6 +213,7 @@ h2{
 .token{
     min-height: 100vh;
     color: var(--text-color);
+    padding-top: 50px;
 }
 
 .token .container{
@@ -250,7 +255,7 @@ h2{
 
 .buy .container h3{
     margin-bottom: 50px;
-    font-size: 32PX;
+    font-size: 32px;
 }
 
 .card{
@@ -276,12 +281,16 @@ h2{
     color: rgb(81, 81, 240);
 }
 
+.contract{
+    margin-top: 20px;
+}
+
 /* FOOTER SECTION */
 .footer{
     color: var(--text-color);
     min-height: 200px;
     /* padding-top: 50px; */
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .footer .container{
@@ -290,6 +299,10 @@ h2{
 
 .footer .container p{
     margin-bottom: 20px;
+}
+
+.footer .container h3{
+    font-size: 32px;
 }
 
 .footer .container ul{
@@ -336,10 +349,27 @@ h2{
 } */
 
 
-@media (max-width:550px) {
+@media (max-width:900px) {
+    /* body{
+        display: none;
+    } */
+
+    .hero .container img, .about .container img, .buy .container img{
+        /* height: 50vh; */
+        width: 40vw;
+    }
+
+    .hero .container .hero-content, .about .container .about-content{
+        width: 50%;
+    }
+
+}
+
+@media (max-width:600px) {
 .navbar{
     position: fixed;
     z-index: 100;
+    padding: 0 5px;
 }
 
     h1{
@@ -384,6 +414,10 @@ h2{
         margin-bottom: 50px;
     }
 
+    .hero{
+        padding-top: 20px;
+    }
+
     .buy{
         margin-bottom: 50px;
     }
@@ -407,12 +441,16 @@ h2{
         width: 100vw;
     }
 
+    .hero .container .hero-content, .about .container .about-content{
+        width: 100%;
+    }
+
     .card-section{
         grid-template-columns: 1fr;
     }
 
     .card{
-        width: 90vw;
+        width: 100%;
     }
 
     /* menu */
@@ -435,13 +473,17 @@ h2{
         display: block;
     }
 
+    #check{
+        display: block;
+    }
+
     .hamburger{
         height: 20px;
         width: 25px;
         display: block;
         cursor: pointer;
         position: absolute;
-        right: 30px;
+        right: 40px;
     }
 
     .showcase-text h2{
@@ -453,7 +495,7 @@ h2{
         width: 30px;
         height: 30px;
         position: absolute;
-        right: 20px;
+        margin-right: 10px;
         opacity: 0%;
         z-index: 7;
         cursor: pointer;
@@ -461,7 +503,7 @@ h2{
 
     .close{
         position: absolute;
-        right: 30px;
+        margin-right: 10px;
         opacity: 0%;
         display: block;
     }
